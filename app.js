@@ -1,7 +1,10 @@
 const express = require('express');
 const port =  process.env.PORT || 3000;
-const mongoURI = "mongodb://localhost/url-shortner";
+const mongoURI = process.env.MONGO_URI;
 const mongoose = require("mongoose");
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 const app = express();
 const connectOptions = {
