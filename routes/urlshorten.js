@@ -22,7 +22,7 @@ module.exports = app => {
     // generate a shortened id with shortid.generate();
     // CHANGE ON BACKEND SO THAT IT CAN BE PASSED IN AS A FORM AND NOT JSON
     const { originalUrl } = req.body; // shortBaseURl = base of the url
-    const shortBaseUrl = 'http://localhost:' + port;
+    const shortBaseUrl = 'ryan-url-shortener.herokuapp.com/';
     if (!validUrl.isUri(shortBaseUrl)) { // error
       return res.status(401).json("Invalid Base Url");
     }
